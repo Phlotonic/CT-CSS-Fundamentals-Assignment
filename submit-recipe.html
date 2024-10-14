@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Recipe</title>
+    <style>
+        /* Set the background color for the body */
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the container */
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* Style the form */
+        form {
+            background-color: #fff;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Style the form elements */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Style the submit button */
+        .submit-button {
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        /* Apply hover effects to the submit button */
+        .submit-button:hover {
+            background-color: #ff9900;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Your Recipe</h1>
+        <form action="submit-recipe.php" method="post">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="10" required></textarea>
+
+            <button type="submit" class="submit-button">Submit Recipe</button>
+        </form>
+    </div>
+</body>
+</html>
